@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta name="theme-color" content="#2b7a0b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Colheita de Ovos" />
+
+    <title>Controle de Colheita de Ovos</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥚</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🥚 Controle de Colheita de Ovos</h1>
+
+      <!-- Estatísticas -->
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-title">Média Diária</div>
+          <div class="stat-value"><span id="media">0</span> ovos</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">Total Coletado</div>
+          <div class="stat-value"><span id="total">0</span> ovos</div>
+        </div>
+      </div>
+
+      <!-- Formulário -->
+      <div class="form">
+        <div class="input-group">
+          <input
+            type="number"
+            id="qtdOvos"
+            placeholder="Quantidade de ovos"
+            min="0"
+            step="1"
+            inputmode="numeric"
+          />
+          <button id="addDia">Adicionar Dia</button>
+        </div>
+      </div>
+
+      <!-- Tabela -->
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Dia</th>
+              <th>Data</th>
+              <th>Quantidade</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="lista"></tbody>
+        </table>
+      </div>
+
+      <!-- Controles de ação -->
+      <div class="actions">
+        <button id="exportarDados">📊 Exportar</button>
+        <button id="limparTudo" class="btn-secondary">🗑️ Limpar Tudo</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
